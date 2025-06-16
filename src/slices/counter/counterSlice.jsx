@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchCount } from "../../api/counterApi";
 
-export const incrementAsync = createAsyncThunk("counter/incrementAsync", async (amount) => {
+export const incrementAsync = createAsyncThunk("counterSlice/incrementAsync", async (amount) => {
   const response = await fetchCount(amount);
   return response.data;
 });
 
-export const decrementAsync = createAsyncThunk("counter/decrementAsync", async (amount) => {
+export const decrementAsync = createAsyncThunk("counterSlice/decrementAsync", async (amount) => {
   const response = await fetchCount(amount);
   return response.data;
 });

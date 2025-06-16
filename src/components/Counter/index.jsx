@@ -9,8 +9,12 @@ export const Counter = () => {
   const [value, setValue] = useState(0)
 
   const handleChange = (e) => {
-    setValue(Number(e.target.value))
-    console.log(e.target.value)
+    const inputValue = Number(e.target.value)
+    if(isNaN(inputValue) || !isFinite(inputValue)){
+      return
+    }
+    setValue(inputValue)
+    
   }
 
   return (
