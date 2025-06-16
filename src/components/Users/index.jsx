@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addUser, setUsers, setLoading, setError } from "../../slices/users/usersSlice";
 
-export const User = () => {
+export const Users = () => {
   const users = useSelector((state) => state.users.users);
   const loading = useSelector((state) => state.users.loading);
   const error = useSelector((state) => state.users.error);

@@ -1,23 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const usersSlice = createSlice({
-  name: "Users",
+  name: "users",
   initialState: {
     users: [],
-    loading: "loading",
+    isLoading: false,
     error: null
   },
   reducers: {
     setUsers: (state, action) => {
       state.users = action.payload;
-      state.loading = 'succeeded'; 
+      state.isLoading = false; 
     },
     setLoading: (state, action) => {
-      state.loading = action.payload;
+      state.isLoading = action.payload;
     },
      setError: (state, action) => {
       state.error = action.payload;
-      state.loading = 'failed'; 
+      state.isLoading = false; 
     },
     addUser: (state, action) => {
       state.users.push(action.payload);
